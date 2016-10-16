@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEAF6F7A1DAC53AA008CDC15 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAF6F791DAC53AA008CDC15 /* libstdc++.6.0.9.tbd */; };
+		BEAF6F7C1DAC53B5008CDC15 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAF6F7B1DAC53B5008CDC15 /* CoreImage.framework */; };
+		BEAF6F871DAC5529008CDC15 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = BEAF6F861DAC5529008CDC15 /* tessdata */; };
+		BEAF6F891DAC5546008CDC15 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAF6F881DAC5546008CDC15 /* TesseractOCR.framework */; };
 		BEDFBA081DAC2B2B009D3C41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFBA071DAC2B2B009D3C41 /* AppDelegate.swift */; };
 		BEDFBA0A1DAC2B2B009D3C41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFBA091DAC2B2B009D3C41 /* ViewController.swift */; };
 		BEDFBA0D1DAC2B2B009D3C41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDFBA0B1DAC2B2B009D3C41 /* Main.storyboard */; };
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEAF6F791DAC53AA008CDC15 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		BEAF6F7B1DAC53B5008CDC15 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		BEAF6F821DAC54C5008CDC15 /* AppTesteOCR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppTesteOCR-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEAF6F831DAC54C5008CDC15 /* FakeObjectiveCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeObjectiveCClass.h; sourceTree = "<group>"; };
+		BEAF6F861DAC5529008CDC15 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = AppTesteOCR/tessdata; sourceTree = "<group>"; };
+		BEAF6F881DAC5546008CDC15 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = AppTesteOCR/TesseractOCR.framework; sourceTree = "<group>"; };
 		BEDFBA041DAC2B2B009D3C41 /* AppTesteOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTesteOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDFBA071DAC2B2B009D3C41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDFBA091DAC2B2B009D3C41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAF6F7C1DAC53B5008CDC15 /* CoreImage.framework in Frameworks */,
+				BEAF6F891DAC5546008CDC15 /* TesseractOCR.framework in Frameworks */,
+				BEAF6F7A1DAC53AA008CDC15 /* libstdc++.6.0.9.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +87,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEAF6F781DAC53AA008CDC15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEAF6F881DAC5546008CDC15 /* TesseractOCR.framework */,
+				BEAF6F7B1DAC53B5008CDC15 /* CoreImage.framework */,
+				BEAF6F791DAC53AA008CDC15 /* libstdc++.6.0.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEAF6F7F1DAC545A008CDC15 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEAF6F861DAC5529008CDC15 /* tessdata */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
 		BEDFB9FB1DAC2B2B009D3C41 = {
 			isa = PBXGroup;
 			children = (
+				BEAF6F831DAC54C5008CDC15 /* FakeObjectiveCClass.h */,
 				BEDFBA061DAC2B2B009D3C41 /* AppTesteOCR */,
 				BEDFBA1B1DAC2B2B009D3C41 /* AppTesteOCRTests */,
 				BEDFBA261DAC2B2B009D3C41 /* AppTesteOCRUITests */,
+				BEAF6F781DAC53AA008CDC15 /* Frameworks */,
 				BEDFBA051DAC2B2B009D3C41 /* Products */,
+				BEAF6F7F1DAC545A008CDC15 /* Support Files */,
+				BEAF6F821DAC54C5008CDC15 /* AppTesteOCR-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +229,7 @@
 					BEDFBA031DAC2B2B009D3C41 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FD96D52RT5;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					BEDFBA171DAC2B2B009D3C41 = {
@@ -236,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDFBA121DAC2B2B009D3C41 /* LaunchScreen.storyboard in Resources */,
+				BEAF6F871DAC5529008CDC15 /* tessdata in Resources */,
 				BEDFBA0F1DAC2B2B009D3C41 /* Assets.xcassets in Resources */,
 				BEDFBA0D1DAC2B2B009D3C41 /* Main.storyboard in Resources */,
 			);
@@ -413,11 +450,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FD96D52RT5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tesseract\\ Resources",
+					"$(PROJECT_DIR)/AppTesteOCR",
+				);
 				INFOPLIST_FILE = AppTesteOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafabarzotto.AppTesteOCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTesteOCR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +474,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FD96D52RT5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tesseract\\ Resources",
+					"$(PROJECT_DIR)/AppTesteOCR",
+				);
 				INFOPLIST_FILE = AppTesteOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafabarzotto.AppTesteOCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppTesteOCR-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -512,6 +570,7 @@
 				BEDFBA2E1DAC2B2B009D3C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDFBA2F1DAC2B2B009D3C41 /* Build configuration list for PBXNativeTarget "AppTesteOCRTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +579,7 @@
 				BEDFBA311DAC2B2B009D3C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDFBA321DAC2B2B009D3C41 /* Build configuration list for PBXNativeTarget "AppTesteOCRUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +588,7 @@
 				BEDFBA341DAC2B2B009D3C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

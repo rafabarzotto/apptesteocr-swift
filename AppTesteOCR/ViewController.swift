@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let picker = UIImagePickerController()
     
     @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func convert(_ sender: UIBarButtonItem) {
+        print("apertou")
+        performImageRecognition(myImageView.image!)
     }
 
     @IBAction func photofromLibrary(_ sender: UIBarButtonItem) {
@@ -59,6 +68,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             animated: true,
             completion: nil)
     }
+    
+    func performImageRecognition(_ image: UIImage) {
+        let tesseract = G8Tesseract()
+        tesseract.language = "eng+fra"
+        tesseract.engineMode = .tesseractCubeCombined
+        tesseract.pageSegmentationMode = .auto
+        tesseract.maximumRecognitionTime = 60.0
+        tesseract.image = image.g8_blackAndWhite()
+        tesseract.recognize()
+        print(tesseract.recognizedText)
+        textView.text = tesseract.recognizedText
+        textView.isEditable = true
+    }
+    
     
     //MARK: - Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
